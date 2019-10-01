@@ -1,0 +1,764 @@
+/*  RESET CSS
+  http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* END OF RESET */
+
+
+/*HEADER*/
+
+.color-pepe {
+  color: rgba(103, 146, 85, 1);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(#fdfcfb 0%, #e2d1c3 100%);
+  background: -o-linear-gradient(#fdfcfb 0%, #e2d1c3 100%);
+  background: linear-gradient(#fdfcfb 0%, #e2d1c3 100%);
+  overflow-y: scroll;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 16px;
+}
+
+header {
+  min-width: 1300px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  background-color: red;
+  max-width: 160px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin: 0px auto;
+}
+
+header .button {
+  cursor: default;
+}
+
+header .button-clickable {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.play {
+  background-color: rgba(170, 5, 5, 1);
+  color: white;
+  padding: 10px 15px;
+  width: 10%;
+  min-width: 137px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.button-wrapper__header {
+  width: 10%;
+  margin: 10px auto 15px auto;
+}
+
+.replay, .break {
+  width: 40%;
+  padding: 8px 5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.replay {
+  background-color: rgba(39, 174, 96, 1);
+  float: left;
+}
+
+.break {
+  background-color: rgba(242, 153, 74, 1);
+  float: right;
+}
+
+
+/*HEADER END*/
+
+
+/*MAIN WRAPPER*/
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.main-wrapper {
+  width: 100%;
+  min-width: 1300px;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.main-wrapper>div {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.game-settings, .game-stats {
+  width: 22%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.game-field {
+  min-width: 265px;
+  justify-content: center;
+  flex-wrap: wrap;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.field-classic__small {
+  width: 265px;
+}
+
+.field-classic__medium {
+  width: 345px;
+}
+
+.field-classic__large {
+  width: 430px;
+}
+
+.field-runner {
+  width: 500px;
+  height: 500px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.pepe-runner {
+  width: 25px;
+  height: 25px;
+  background-image: url('../img/pepe-standard.png');
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: absolute;
+}
+
+.game-block {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  height: 75px;
+  width: 75px;
+  margin: 5px;
+  border: 1px solid grey;
+}
+
+.game-block__active {
+  border: 2px rgba(95, 140, 76, 1);
+  box-shadow: 0px 0px 5px 2px rgba(95, 140, 76, 1);
+}
+
+.pepe-standard {
+  background: url("../img/pepe-standard.png");
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.game-time__wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.settings-block {
+  margin-top: 15px;
+}
+
+.settings-block h4 {
+  font-weight: 400;
+}
+
+.settings-first {
+  margin-top: 0;
+}
+
+.settings-block:before, .stats-block:before {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.settings-first:before, .stats-first:before {
+  display: none;
+}
+
+.settings-block form {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.settings-block form p {
+  margin-top: 10px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+
+/*input[type="number"] customization*/
+
+.game-time__input {
+  background-color: transparent;
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+
+.game-time__input:focus {
+  outline: none;
+}
+
+.game-time__input::-webkit-slider-runnable-track {
+  margin: 0 auto;
+  max-width: 80%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: rgba(95, 140, 76, 1);
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+.game-time__input::-webkit-slider-thumb {
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/pepe-standard.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -16px;
+}
+
+.game-time__input:focus::-webkit-slider-runnable-track {}
+
+.game-time__input::-moz-range-track {
+  width: 80%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: rgba(95, 140, 76, 1);
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+.game-time__input::-moz-range-thumb {
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/pepe-standard.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  -moz-appearance: none;
+  margin-top: -14px;
+  border: none;
+}
+
+.game-time__input::-ms-track {
+  margin: 0 auto;
+  width: 90%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+.game-time__input::-ms-fill-lower {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: rgba(95, 140, 76, 1);
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+.game-time__input::-ms-fill-upper {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: rgba(95, 140, 76, 1);
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+.game-time__input::-ms-thumb {
+  height: 40px;
+  width: 40px;
+  background-image: url("../img/pepe-standard.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  border: none;
+}
+
+
+/*end of input[type="number"] customization*/
+
+
+/*input[type="radio"] customization*/
+
+.settings-block form input[type="radio"] {
+  display: none;
+}
+
+.settings-block form input[type="radio"]+label {
+  margin-right: 5px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+
+.settings-block form input[type="radio"]:checked+label {
+  border: none;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("../img/pepe-standard.png");
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.settings-block form input[value="hard"]:checked+label {
+  background: url("../img/pepe-angry.jpg");
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.settings-block form input[type="radio"]:disabled+label {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+/*end of input[type="radio"] customization*/
+
+.game-stats h4:not(:last-child) {
+  font-weight: 400;
+}
+
+.game-stats-list li {
+  margin-top: 20px;
+}
+
+.game-stats-list li:first-child {
+  margin-top: 40px;
+}
+
+.game-stats-list li:last-child {
+  font-weight: 500;
+  margin-top: 90px;
+}
+
+.user-info {
+  margin-top: 20px;
+  padding: 10px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.user-info .button-wrapper {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 15px 0px 10px 0px;
+}
+
+
+/*POPUPS*/
+
+.popup-wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+}
+
+.popup {
+  visibility: hidden;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  padding: 5px;
+  position: absolute;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 1);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  animation: popupShow 1s;
+}
+
+.popup-controls {
+  visibility: hidden;
+}
+
+.popup-controls span {
+  margin: 0px 10px;
+}
+
+.popup-list {
+  margin: 10px 0px 0px 60px;
+}
+
+.popup-list__item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
+
+.popup-list__item:last-child {
+  margin-bottom: 50px;
+}
+
+.popup h3 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.controls-key {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.controls-key+p {
+  margin-left: 30px;
+}
+
+.controls-key span {
+  margin: 0 10px;
+}
+
+.popup-close {
+  padding: 5px 8px;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(175, 21, 21, 1);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.popup-gameover {
+  visibility: hidden;
+}
+
+
+/*buttons*/
+
+header .button-clickable {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+  transition: 0.1s;
+}
+
+.button-clickable:hover {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.button-clickable:active {
+  box-shadow: none;
+}
+
+
+.info-button {
+  width: 40%;
+  padding: 8px 5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin: 5px;
+  transition: 0.2s;
+  background-color: rgba(86, 204, 242, 1);
+}
+
+.controls {
+  box-shadow: -4px -4px rgba(0, 0, 0, 0.7);
+}
+
+.controls:hover {
+  box-shadow: -2px -2px rgba(0, 0, 0, 0.7);
+}
+
+.controls:active {
+  box-shadow: none;
+}
+
+.help {
+  box-shadow: 4px -4px rgba(0, 0, 0, 0.7);
+}
+
+.help:hover {
+  box-shadow: 2px -2px rgba(0, 0, 0, 0.7);
+}
+
+.help:active {
+  box-shadow: none;
+}
+
+.version {
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.version:hover {
+  box-shadow: -2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.version:active {
+  box-shadow: none;
+}
+
+.contacts {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  background-color: rgba(145, 51, 153, 0.9);
+}
+
+.contacts:hover {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.contacts:active {
+  box-shadow: none;
+}
+
+
+/*service classes*/
+
+.float-clear {
+  clear: both;
+}
+
+.column-wrapper {
+  width: 22%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.column-wrapper>.game-stats {
+  width: 100%;
+}
+
+
+/*animation*/
+
+.popup-visible {
+  animation: popupShow 0.3s;
+}
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*RAGE MODE PEPE*/
+.button-play-rage {
+  color: white;
+  padding: 10px 15px;
+  width: 10%;
+  min-width: 137px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.button-play-rage:hover {
+  animation-name: shake;
+  animation-duration: 0.1s;
+  transform-origin:50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.button-play-rage {
+  width: auto;
+  max-width: 300px;
+}
+
+@keyframes shake {
+  0% { transform: translate(2px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(2px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.rage-mode-page {
+  background: #500000;
+  animation-name: blink-bg;
+  animation-duration: 0.6s;
+  transform-origin:50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes blink-bg {
+  0%   { background-color: #500000; }
+  49% { background-color: #130000; }
+  50% { background-color: #500000; }
+  99% { background-color: #130000; }
+  100% { background-color: #500000; }
+}
+
+.rage-mode-page .pepe-standard {
+  background: url('http://i0.kym-cdn.com/photos/images/original/000/915/652/b49.gif');
+
+  background-size: contain;
+}
