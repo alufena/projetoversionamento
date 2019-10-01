@@ -14,11 +14,11 @@
 <body>
   <header>
     <h1><span class="color-pepe">pepe</span> clicker</h1>
-    <a class="button play button-clickable" id="play">play</a>
-    <a class="button button-play-rage button-clickable" id="play-rage">play rage mode</a>
+    <a class="button play button-clickable" id="play">Jogar</a>
+    <a class="button button-play-rage button-clickable" id="play-rage">Jogar modo raiva</a>
     <div class="button-wrapper__header" id="button-wrapper__header">
-      <a class="button replay" id="replay">replay</a>
-      <a class="button break" id="break">break</a>
+      <a class="button replay" id="replay">Repeti</a>
+      <a class="button break" id="break">Pausa</a>
       <div class="float-clear"></div>
     </div>
   </header>
@@ -37,7 +37,7 @@
         <h4>Modo</h4>
         <form action="">
           <p><input type="radio" name="game-mode__input" id="game-mode__classic" value="classic" checked><label for="game-mode__classic"></label>Classico</p>
-          <p><input type="radio" name="game-mode__input" id="game-mode__test1" value="runner"><label for="game-mode__test1"></label>Runner</p>
+          <p><input type="radio" name="game-mode__input" id="game-mode__test1" value="runner"><label for="game-mode__test1"></label>Corredor</p>
           <p><input type="radio" name="game-mode__input" id="game-mode__test2" value="" disabled><label for="game-mode__test2"></label>in/dev</p>
         </form>
       </div>
@@ -81,42 +81,42 @@
   <div class="popup-wrapper" id="popup-wrapper">
     <div class="popup popup-controls" id="popup-controls">
       <a class="button popup-close">&times;</a>
-      <h3>CONTROLS</h3>
+      <h3>CONTROLES</h3>
       <ul class="popup-list">
         <li class="popup-list__item">
           <p class="controls-key">Num<br>Lock</p>
-          <p>Use Numpad for click 1-9 Pepe in Classic mode.</p>
+          <p>Use o Numpad para clicar em 1-9 Pepe no modo Clássico.</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">P</p>
-          <p>Break game</p>
+          <p>Pausa jogo</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>New game with current settings</p>
+          <p>Novo jogo com as configurações atuais</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">Ctrl</p><span>+</span>
           <p class="controls-key">X</p>
-          <p>Close pop-up window</p>
+          <p>Fechar janela pop-up</p>
         </li>
       </ul>
     </div>
     <div class="popup popup-help" id="popup-help">
       <a class="button popup-close">&times;</a>
       <h3>
-        HELP
+        AJUDA
       </h3>
       <ul class="popup-list">
         <li class="popup-list__item">
-          <p>Score as many points as possible!</p>
+          <p>Marque o máximo de pontos possível!</p>
         </li>
         <li class="popup-list__item">
-          <p>Classic mode - use your mouse or Numpad for click on Pepe!</p>
+          <p>Modo clássico - use o mouse ou o Numpad para clicar em Pepe!</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Play now</p>
+          <p>Jogue agora</p>
         </li>
       </ul>
     </div>
@@ -128,10 +128,10 @@
       </h3>
       <ul class="popup-list">
         <li class="popup-list__item">
-          <p id="gameover-info">Your time is over!</p>
+          <p id="gameover-info">Seu tempo acabou!</p>
         </li>
         <li class="popup-list__item">
-          <p>In this attempt your score is <span id="gameover-score">0</span>.</p>
+          <p>Nesta tentativa, sua pontuação é <span id="gameover-score">0</span>.</p>
         </li>
         <li class="popup-list__item">
           <p class="gameover-highscore" id="gameover-highscore"></p>
