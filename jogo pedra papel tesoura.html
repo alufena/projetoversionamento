@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> </title>
+</head>
+<body>
+    <script>
+    
+    jogo = Math.floor(Math.random()*3);
+        jogador = prompt("0) Pedra \n 1) Papel \n 2) Tesoura");
+
+         if(jogo == jogador){
+            document.write("Empate");
+            document.write("<div>Computador escolheu " + escolha(jogo) + "</div><div> Você escolheu " + escolha(jogador) + " </div>")
+        } else if((jogo == 0 && jogador == 1) || (jogo == 1 && jogador == 2) || (jogo == 2 && jogador == 0)){
+            document.write("Parabéns, você venceu");
+            document.write("<div>Computador escolheu " + escolha(jogo) + "</div><div> Você escolheu " + escolha(jogador) + " </div>")
+        } else {
+            document.write("você perdeu");
+            document.write("<div>Computador escolheu " + escolha(jogo) + "</div><div> Você escolheu " + escolha(jogador) + " </div>")
+        }
+       
+
+        function escolha(x){
+            if(x == 0){
+                return " pedra";
+            }else if(x==1){
+                return " papel";
+            }else{
+                return " tesoura";
+            }
+        }
+    
+        
+
+    </script>
+</body>
+</html>
