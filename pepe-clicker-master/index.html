@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,7 +20,7 @@
 
 <body>
   <header>
-    <h1><span class="color-pepe">pepe</span> clicker</h1>
+    <h1 class="alert alert-dark"><span class="color-pepe">pepe</span> clicker</h1>
     <a class="button play button-clickable" id="play">Jogar</a>
     <a class="button button-play-rage button-clickable" id="play-rage">Jogar modo raiva</a>
     <div class="button-wrapper__header" id="button-wrapper__header">
@@ -24,7 +31,7 @@
   </header>
   <div class="main-wrapper">
     <div class="game-settings" id="game-settings">
-      <h2>SETTINGS</h2>
+      <h2>CONFIGURAÇÕES</h2>
       <div class="settings-block settings-first" id="game-time">
         <h4 class="time-header">Tempo</h4>
         <div class="game-time__wrapper">
@@ -54,7 +61,7 @@
     </div>
     <div class="column-wrapper">
       <div class="game-stats" id="game-stats">
-        <h2>STATS</h2>
+        <h2>Status</h2>
         <ul class="game-stats-list">
           <li class="game-stats__item" id="game-timeLeft">
             <h4>Time left: 0</h4>
@@ -138,28 +145,28 @@
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Replay with current settings</p>
+          <p>Repetir com as configurações atuais</p>
         </li>
       </ul>
     </div>
     <div class="popup popup-gameover" id="popup-gameover__runner">
       <a class="button popup-close">&times;</a>
       <h3>
-        GAME OVER
+        FIM DE JOGO
       </h3>
       <ul class="popup-list">
         <li class="popup-list__item">
-          <p id="gameover-info">You catch Pepe!</p>
+          <p id="gameover-info">Você pega Pepe!</p>
         </li>
         <li class="popup-list__item">
-          <p>Your time: <span id="gameover-stopwatch">0</span>s.</p>
+          <p>Seu tempo:<span id="gameover-stopwatch">0</span>s.</p>
         </li>
         <li class="popup-list__item">
           <p class="gameover-highscore" id=""></p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Replay with current settings</p>
+          <p>Repetir com as configurações atuais</p>
         </li>
       </ul>
     </div>
