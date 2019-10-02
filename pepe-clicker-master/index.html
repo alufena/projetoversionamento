@@ -2,36 +2,29 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
-  <title>Pepe clicker v0.3.2</title>
+  <link rel="shortcut icon" href="img/naruto ico.png" type="image/png">
+  <title>Naruto clicker v0.3.1</title>
 </head>
 
 <body>
   <header>
-    <h1 class="alert alert-dark"><span class="color-pepe">pepe</span> clicker</h1>
+    <h1><span class="color-pepe">Naruto</span> Clicker</h1>
     <a class="button play button-clickable" id="play">Jogar</a>
-    <a class="button button-play-rage button-clickable" id="play-rage">Jogar modo raiva</a>
+    <a class="button button-play-rage button-clickable" id="play-rage">Jogar modo furia</a>
     <div class="button-wrapper__header" id="button-wrapper__header">
-      <a class="button replay" id="replay">Repeti</a>
-      <a class="button break" id="break">Pausa</a>
+      <a class="button replay" id="replay">Repetir</a>
+      <a class="button break" id="break">Pausar</a>
       <div class="float-clear"></div>
     </div>
   </header>
   <div class="main-wrapper">
     <div class="game-settings" id="game-settings">
-      <h2>CONFIGURAÇÕES</h2>
+      <h2>Configurações</h2>
       <div class="settings-block settings-first" id="game-time">
         <h4 class="time-header">Tempo</h4>
         <div class="game-time__wrapper">
@@ -41,7 +34,7 @@
         </div>
       </div>
       <div class="settings-block" id="game-mode">
-        <h4>Modo</h4>
+        <h4>Modos</h4>
         <form action="">
           <p><input type="radio" name="game-mode__input" id="game-mode__classic" value="classic" checked><label for="game-mode__classic"></label>Classico</p>
           <p><input type="radio" name="game-mode__input" id="game-mode__test1" value="runner"><label for="game-mode__test1"></label>Corredor</p>
@@ -49,7 +42,7 @@
         </form>
       </div>
       <div class="settings-block " id="game-fieldSize">
-        <h4>Dificuldade</h4>
+        <h4>Dificuldades</h4>
         <form action="">
           <p><input type="radio" name="game-difficult__input" id="game-difficult__easy" value="easy" checked><label for="game-difficult__easy"></label>Facil</p>
           <p><input type="radio" name="game-difficult__input" id="game-difficult__medium" value="medium"><label for="game-difficult__medium"></label>Medio</p>
@@ -64,21 +57,21 @@
         <h2>Status</h2>
         <ul class="game-stats-list">
           <li class="game-stats__item" id="game-timeLeft">
-            <h4>Time left: 0</h4>
+            <h4>Tempo: 0</h4>
           </li>
           <li class="game-stats__item" id="game-score">
-            <h4>Score: 0</h4>
+            <h4>Pontuação: 0</h4>
           </li>
           <li class="game-stats__item" id="game-highscore">
-            <h4>Highscore: 0</h4>
+            <h4>Melhor Pontuação: 0</h4>
           </li>
         </ul>
       </div>
       <div class="user-info">
-        <h2>INFORMAÇÃO</h2>
+        <h2>Informações</h2>
         <div class="button-wrapper" id="info-buttons">
-          <a class="button info-button controls" id="controls-info">CONTROLES</a>
-          <a class="button info-button help" id="help-info">AJUDA</a>
+          <a class="button info-button controls" id="controls-info">Controles</a>
+          <a class="button info-button help" id="help-info">Ajuda</a>
           <a class="button info-button version" id="version-info">IN-DEV</a>
           <a href="https://github.com/grispire/pepe-clicker" class="button info-button contacts" id="contacts-info">GitHub</a>
         </div>
@@ -88,42 +81,42 @@
   <div class="popup-wrapper" id="popup-wrapper">
     <div class="popup popup-controls" id="popup-controls">
       <a class="button popup-close">&times;</a>
-      <h3>CONTROLES</h3>
+      <h3>Controles</h3>
       <ul class="popup-list">
         <li class="popup-list__item">
           <p class="controls-key">Num<br>Lock</p>
-          <p>Use o Numpad para clicar em 1-9 Pepe no modo Clássico.</p>
+          <p>Use Numpad for click 1-9 Pepe in Classic mode.</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">P</p>
-          <p>Pausa jogo</p>
+          <p>Break game</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Novo jogo com as configurações atuais</p>
+          <p>New game with current settings</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">Ctrl</p><span>+</span>
           <p class="controls-key">X</p>
-          <p>Fechar janela pop-up</p>
+          <p>Close pop-up window</p>
         </li>
       </ul>
     </div>
     <div class="popup popup-help" id="popup-help">
       <a class="button popup-close">&times;</a>
       <h3>
-        AJUDA
+        HELP
       </h3>
       <ul class="popup-list">
         <li class="popup-list__item">
-          <p>Marque o máximo de pontos possível!</p>
+          <p>Score as many points as possible!</p>
         </li>
         <li class="popup-list__item">
-          <p>Modo clássico - use o mouse ou o Numpad para clicar em Pepe!</p>
+          <p>Classic mode - use your mouse or Numpad for click on Pepe!</p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Jogue agora</p>
+          <p>Play now</p>
         </li>
       </ul>
     </div>
@@ -135,38 +128,38 @@
       </h3>
       <ul class="popup-list">
         <li class="popup-list__item">
-          <p id="gameover-info">Seu tempo acabou!</p>
+          <p id="gameover-info">Your time is over!</p>
         </li>
         <li class="popup-list__item">
-          <p>Nesta tentativa, sua pontuação é <span id="gameover-score">0</span>.</p>
+          <p>In this attempt your score is <span id="gameover-score">0</span>.</p>
         </li>
         <li class="popup-list__item">
           <p class="gameover-highscore" id="gameover-highscore"></p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Repetir com as configurações atuais</p>
+          <p>Replay with current settings</p>
         </li>
       </ul>
     </div>
     <div class="popup popup-gameover" id="popup-gameover__runner">
       <a class="button popup-close">&times;</a>
       <h3>
-        FIM DE JOGO
+        GAME OVER
       </h3>
       <ul class="popup-list">
         <li class="popup-list__item">
-          <p id="gameover-info">Você pega Pepe!</p>
+          <p id="gameover-info">You catch Pepe!</p>
         </li>
         <li class="popup-list__item">
-          <p>Seu tempo:<span id="gameover-stopwatch">0</span>s.</p>
+          <p>Your time: <span id="gameover-stopwatch">0</span>s.</p>
         </li>
         <li class="popup-list__item">
           <p class="gameover-highscore" id=""></p>
         </li>
         <li class="popup-list__item">
           <p class="controls-key">R</p>
-          <p>Repetir com as configurações atuais</p>
+          <p>Replay with current settings</p>
         </li>
       </ul>
     </div>
